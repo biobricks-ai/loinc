@@ -1,0 +1,14 @@
+stages:
+  download:
+    cmd: Rscript R/download.R
+    deps:
+      - R/download.R
+    outs:
+      - cache/Loinc_2.72.zip
+  process:
+    cmd: Rscript R/process.R
+    deps:
+      - R/process.R
+    outs:
+      - data/Loinc.parquet
+      - data/MapTo.parquet

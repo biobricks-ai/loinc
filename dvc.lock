@@ -1,0 +1,25 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: Rscript R/download.R
+    deps:
+    - path: R/download.R
+      md5: 656d5385061f28d5cbfec95784aa8cb0
+      size: 1675
+    outs:
+    - path: cache/Loinc_2.72.zip
+      md5: 0f4e45cf4104b0206a97bf2dc5233b99
+      size: 87061668
+  process:
+    cmd: Rscript R/process.R
+    deps:
+    - path: R/process.R
+      md5: a1a94b3a74abacabe1978388b75a9c0a
+      size: 371
+    outs:
+    - path: data/Loinc.parquet
+      md5: 5c29aa40428853543629cc13f2ddfea9
+      size: 13869320
+    - path: data/MapTo.parquet
+      md5: f0ff4560eb2b498321bee18a8c4f7e49
+      size: 56798
