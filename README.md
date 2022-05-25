@@ -1,3 +1,4 @@
+<a href="https://github.com/biobricks-ai/LOINC/actions"><img src="https://github.com/biobricks-ai/LOINC/actions/workflows/bricktools-check.yaml/badge.svg?branch=master"/></a>
 # Description
 
 
