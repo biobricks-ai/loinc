@@ -21,6 +21,7 @@
             rPackages.stringr
             rPackages.vroom
             rPackages.arrow
+            rPackages.dotenv
           ];
         };
       });
