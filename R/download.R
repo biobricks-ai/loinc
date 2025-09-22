@@ -5,22 +5,25 @@ library(dplyr)
 library(httr)
 library(fs)
 library(stringr)
+library(dotenv)
 
-cache_dir <- "cache"
+cache_dir <- "download"
 fs::dir_create(cache_dir)
 
 download_url <- "https://loinc.org/download/loinc-complete/"
 login_url <- "https://loinc.org/wp-login.php"
 
 # get credentials
-message("You will need to create a free account at https://loinc.org/join/")
-if (interactive()) {
-    username <- readline("LOINC username: ")
-} else {
-    cat("LOINC username: ")
-    username <- readLines("stdin", n = 1)
+# Read credentials from .env file
+dotenv::load_dot_env()
+
+username <- Sys.getenv("USER")
+password <- Sys.getenv("PASS")
+
+if (username == "" || password == "") {
+    message("You will need to create a free account at https://loinc.org/join/")
+    stop("Please set LOINC_USERNAME and LOINC_PASSWORD in your .env file.")
 }
-password <- getPass("LOINC Passwd: ")
 
 # login
 login_submit_res <- login_url |>
@@ -55,10 +58,4 @@ accept_license_resp <- httr::POST(
     set_cookies(.cookies = auth_cookie)
 )
 
-filename <- accept_license_resp |>
-    pluck("headers") |>
-    pluck("content-disposition") |>
-    stringr::str_match("filename=\"(.*)\"") |>
-    pluck(2)
-
-writeBin(accept_license_resp$content, con = file.path(cache_dir, filename))
+writeBin(accept_license_resp$content, con = file.path(cache_dir, "Loinc.zip"))
