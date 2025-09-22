@@ -4,22 +4,40 @@ stages:
     cmd: Rscript R/download.R
     deps:
     - path: R/download.R
-      md5: 656d5385061f28d5cbfec95784aa8cb0
-      size: 1675
+      hash: md5
+      md5: 4edb60527ef64c336d220738a23b4059
+      size: 1599
     outs:
-    - path: cache/Loinc_2.72.zip
-      md5: 0f4e45cf4104b0206a97bf2dc5233b99
-      size: 87061668
+    - path: download/Loinc.zip
+      hash: md5
+      md5: 09382b5adcb37cb0b66ffe61ee9dec58
+      size: 81421626
   process:
     cmd: Rscript R/process.R
     deps:
     - path: R/process.R
-      md5: a1a94b3a74abacabe1978388b75a9c0a
-      size: 371
+      hash: md5
+      md5: 9a3ec0fb58735c62bc56c88f9187460f
+      size: 370
     outs:
-    - path: data/Loinc.parquet
-      md5: 5c29aa40428853543629cc13f2ddfea9
-      size: 13869320
-    - path: data/MapTo.parquet
-      md5: f0ff4560eb2b498321bee18a8c4f7e49
-      size: 56798
+    - path: brick/Loinc.parquet
+      hash: md5
+      md5: 0c514b14118546d6c28e15cdee3c1dff
+      size: 15328524
+    - path: brick/MapTo.parquet
+      hash: md5
+      md5: c899fa64c9e26885b7eb2205acf596ae
+      size: 71239
+  unzip:
+    cmd: mkdir -p "raw"; unzip download/Loinc.zip -d raw/
+    deps:
+    - path: download/Loinc.zip
+      hash: md5
+      md5: 09382b5adcb37cb0b66ffe61ee9dec58
+      size: 81421626
+    outs:
+    - path: raw
+      hash: md5
+      md5: f8344774cb3cdab3caed0ac75fbe17c8.dir
+      size: 947507303
+      nfiles: 74

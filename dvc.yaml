@@ -4,11 +4,17 @@ stages:
     deps:
       - R/download.R
     outs:
-      - cache/Loinc_2.72.zip
+      - download/Loinc.zip
+  unzip:
+    cmd: mkdir -p "raw"; unzip download/Loinc.zip -d raw/
+    deps:
+      - download/Loinc.zip
+    outs:
+      - raw
   process:
     cmd: Rscript R/process.R
     deps:
       - R/process.R
     outs:
-      - data/Loinc.parquet
-      - data/MapTo.parquet
+      - brick/Loinc.parquet
+      - brick/MapTo.parquet
