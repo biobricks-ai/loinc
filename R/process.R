@@ -2,8 +2,8 @@ library(fs)
 library(vroom)
 library(arrow)
 
-cache_dir <- "cache"
-data_dir <- "data"
+cache_dir <- "raw"
+data_dir <- "brick"
 
 fs::dir_create(data_dir)
 
