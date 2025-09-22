@@ -2,3 +2,6 @@ logs
 /download
 /list
 /brick
+/download
+/raw
+.env
