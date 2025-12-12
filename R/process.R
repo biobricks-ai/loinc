@@ -7,12 +7,14 @@ data_dir <- "brick"
 
 fs::dir_create(data_dir)
 
-arrow::write_parquet(
-    vroom::vroom(file.path(cache_dir, "LoincTable", "Loinc.csv")),
-    file.path(data_dir,"Loinc.parquet")
-)
+csv_files <- fs::dir_ls(cache_dir, recurse = TRUE, glob = "*.csv")
 
-arrow::write_parquet(
-    vroom::vroom(file.path(cache_dir,"LoincTable","MapTo.csv")),
-    file.path(data_dir,"MapTo.parquet")
-)
+for (csv_file in csv_files) {
+    rel_path <- fs::path_rel(csv_file, cache_dir)
+    parquet_path <- file.path(data_dir, fs::path_ext_set(rel_path, "parquet"))
+    fs::dir_create(fs::path_dir(parquet_path))
+    arrow::write_parquet(
+        vroom::vroom(csv_file),
+        parquet_path
+    )
+}
