@@ -1,19 +1,22 @@
 stages:
   download:
-    cmd: Rscript R/download.R
+    cmd: stages/01_download.sh
     deps:
+      - stages/01_download.sh
       - R/download.R
     outs:
       - download/Loinc.zip
   unzip:
-    cmd: mkdir -p "raw"; unzip download/Loinc.zip -d raw/
+    cmd: stages/02_unzip.sh
     deps:
+      - stages/02_unzip.sh
       - download/Loinc.zip
     outs:
       - raw
   process:
-    cmd: Rscript R/process.R
+    cmd: stages/03_build.sh
     deps:
+      - stages/03_build.sh
       - R/process.R
     outs:
       # ( export IN='raw' OUT='brick'; find $IN -name '*.csv' | perl -pe 's|^\Q$ENV{IN}\E|$ENV{OUT}|;s|\.csv$|.parquet|; $_ = sprintf("%6s- %s", " ", $_)' | sort )
