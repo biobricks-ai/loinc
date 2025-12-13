@@ -16,5 +16,6 @@ stages:
     deps:
       - R/process.R
     outs:
+      # ( export IN='raw' OUT='brick'; find $IN -name '*.csv' | perl -pe 's|^\Q$ENV{IN}\E|$ENV{OUT}|;s|\.csv$|.parquet|; $_ = sprintf("%6s- %s", " ", $_)' | sort )
       - brick/Loinc.parquet
       - brick/MapTo.parquet
