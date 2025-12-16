@@ -2,17 +2,45 @@
 
 # Script to process unzipped files and build parquet files
 
-# Get local path
-localpath=$(pwd)
-echo "Local path: $localpath"
+function _setup() {
+	# Get local path
+	localpath=$(pwd)
+	# Set raw path
+	export rawpath="$localpath/raw"
+	export brickpath="$localpath/brick"
+}
 
-# Set raw path
-export rawpath="$localpath/raw"
-echo "Raw path: $rawpath"
+function filelist() {
+	_setup;
+	export IN=$(basename ${rawpath}) OUT=$(basename ${brickpath});
+	find $IN -name '*.csv' \
+		| perl -pe '
+			s|^\Q$ENV{IN}\E|$ENV{OUT}|;
+			s|\.csv$|.parquet|;
+			$_ = sprintf("%6s- %s", " ", $_)
+		' \
+		| sort
+}
 
-# Create brick directory
-export brickpath="$localpath/brick"
-mkdir -p $brickpath
-echo "Brick path: $brickpath"
+function main() {
+	_setup;
 
-Rscript R/process.R
+	echo "Local path: $localpath"
+
+	echo "Raw path: $rawpath"
+
+	# Create brick directory
+	mkdir -p $brickpath
+	echo "Brick path: $brickpath"
+
+	Rscript R/process.R
+}
+
+case "${1:-main}" in
+	filelist)
+		filelist
+		;;
+	*)
+		main
+		;;
+esac
