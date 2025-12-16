@@ -75,3 +75,13 @@ stages:
       - brick/LoincTable/MapTo.parquet
       - brick/LoincTable/SourceOrganization.parquet
       ## }}}
+  process-non-csv:
+    cmd: stages/04_build-non-csv.sh
+    deps:
+      - stages/04_build-non-csv.sh
+    outs:
+      # stages/04_build-non-csv.sh filelist
+      ## {{{
+      - brick/AccessoryFiles/DocumentOntologyOwl/DocumentOntology.owl
+      - brick/loinc.xml
+      ## }}}
