@@ -18,6 +18,7 @@ stages:
     deps:
       - stages/03_build.sh
       - R/process.R
+      - raw
     outs:
       # stages/03_build.sh filelist
       ## {{{
@@ -79,6 +80,7 @@ stages:
     cmd: stages/04_build-non-csv.sh
     deps:
       - stages/04_build-non-csv.sh
+      - raw
     outs:
       # stages/04_build-non-csv.sh filelist
       ## {{{
