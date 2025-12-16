@@ -13,31 +13,273 @@ stages:
       md5: 09382b5adcb37cb0b66ffe61ee9dec58
       size: 81421626
   process:
-    cmd: Rscript R/process.R
+    cmd: stages/03_build.sh
     deps:
     - path: R/process.R
       hash: md5
-      md5: 9a3ec0fb58735c62bc56c88f9187460f
-      size: 370
+      md5: e99fc2cde17f8b752e5023c1c32c11ea
+      size: 470
+    - path: raw
+      hash: md5
+      md5: f8344774cb3cdab3caed0ac75fbe17c8.dir
+      size: 947507303
+      nfiles: 74
+    - path: stages/03_build.sh
+      hash: md5
+      md5: 160c9597271d6185e26df678e2a16503
+      size: 730
     outs:
-    - path: brick/Loinc.parquet
+    - path: brick/AccessoryFiles/AnswerFile/AnswerList.parquet
+      hash: md5
+      md5: 9df158c549c52d9afe3483f4a12e2096
+      size: 915384
+    - path: brick/AccessoryFiles/AnswerFile/LoincAnswerListLink.parquet
+      hash: md5
+      md5: 2fdcefdc523f918903a604809d32482d
+      size: 936929
+    - path: brick/AccessoryFiles/ChangeSnapshot/LoincChangeSnapshot.parquet
+      hash: md5
+      md5: 25689d43caa8a7631e6cbf40db7ed9ed
+      size: 35505
+    - path: brick/AccessoryFiles/ChangeSnapshot/PartChangeSnapshot.parquet
+      hash: md5
+      md5: 44c468f5fe534892e213ea1297f30c4e
+      size: 5386
+    - path: 
+        brick/AccessoryFiles/ComponentHierarchyBySystem/ComponentHierarchyBySystem.parquet
+      hash: md5
+      md5: 049e276672bc66e9296e58122906d465
+      size: 5212750
+    - path: brick/AccessoryFiles/ConsumerName/ConsumerName.parquet
+      hash: md5
+      md5: a5201c4fe56ec01c083e022ad8683cdd
+      size: 1123319
+    - path: brick/AccessoryFiles/DocumentOntology/DocumentOntology.parquet
+      hash: md5
+      md5: 40f1aa1f521f01a296da8a49e826ff33
+      size: 82090
+    - path: brick/AccessoryFiles/GroupFile/Group.parquet
+      hash: md5
+      md5: b90c84606ce023e476eed4610274a45e
+      size: 172799
+    - path: brick/AccessoryFiles/GroupFile/GroupAttributes.parquet
+      hash: md5
+      md5: f0c5133d89af9cdb3b6299e948cd339a
+      size: 16473
+    - path: brick/AccessoryFiles/GroupFile/GroupLoincTerms.parquet
+      hash: md5
+      md5: db853c439b9b312593abc4f02710ddd6
+      size: 830963
+    - path: brick/AccessoryFiles/GroupFile/ParentGroup.parquet
+      hash: md5
+      md5: 2e4ba4785098364ebb1c1e7660d831c7
+      size: 5451
+    - path: brick/AccessoryFiles/GroupFile/ParentGroupAttributes.parquet
+      hash: md5
+      md5: 5138a19a6e275eb46e6c28d1e2ca3596
+      size: 11154
+    - path: brick/AccessoryFiles/ImagingDocuments/ImagingDocumentCodes.parquet
+      hash: md5
+      md5: 1106a7fd8397dffa821a46e70e44e103
+      size: 152353
+    - path: brick/AccessoryFiles/LinguisticVariants/LinguisticVariants.parquet
+      hash: md5
+      md5: 139f835c8d7cdca061fd16e8066f5bac
+      size: 6284
+    - path: brick/AccessoryFiles/LinguisticVariants/arJO32LinguisticVariant.parquet
+      hash: md5
+      md5: 985bc4b2922ce4c1712c81b87dee940d
+      size: 30142
+    - path: brick/AccessoryFiles/LinguisticVariants/csCZ33LinguisticVariant.parquet
+      hash: md5
+      md5: bda5a511ebbc0c1fe9c599a7d12ce31e
+      size: 60900
+    - path: brick/AccessoryFiles/LinguisticVariants/deAT24LinguisticVariant.parquet
+      hash: md5
+      md5: 8dcc3d2ce23b24f2197da0e7c1d3c1fa
+      size: 275959
+    - path: brick/AccessoryFiles/LinguisticVariants/deDE15LinguisticVariant.parquet
+      hash: md5
+      md5: aedbcb0d0e865f2b01d111b340e643fe
+      size: 758495
+    - path: brick/AccessoryFiles/LinguisticVariants/elGR17LinguisticVariant.parquet
+      hash: md5
+      md5: 88df1733b71453d7f9f7979ad89e667e
+      size: 6689569
+    - path: brick/AccessoryFiles/LinguisticVariants/esAR7LinguisticVariant.parquet
+      hash: md5
+      md5: 1352a0908034e054142c63bcba2b8eb3
+      size: 1537238
+    - path: brick/AccessoryFiles/LinguisticVariants/esES12LinguisticVariant.parquet
+      hash: md5
+      md5: 20b05897461f543906641e5ffc4beaa8
+      size: 1295932
+    - path: brick/AccessoryFiles/LinguisticVariants/esMX28LinguisticVariant.parquet
+      hash: md5
+      md5: 37340486721d18e06b5337a7ba504ba6
+      size: 4002971
+    - path: brick/AccessoryFiles/LinguisticVariants/etEE10LinguisticVariant.parquet
+      hash: md5
+      md5: 98b8bc0c2c21e22b9351a347330c7452
+      size: 522848
+    - path: brick/AccessoryFiles/LinguisticVariants/frBE23LinguisticVariant.parquet
+      hash: md5
+      md5: 0f6e578b6f9828f8211a70f378c7a6ac
+      size: 840310
+    - path: brick/AccessoryFiles/LinguisticVariants/frCA8LinguisticVariant.parquet
+      hash: md5
+      md5: 46dde983858d518f3ac21740bd08a945
+      size: 883987
+    - path: brick/AccessoryFiles/LinguisticVariants/frFR18LinguisticVariant.parquet
+      hash: md5
+      md5: a4bfe7bcf61a83d1c57942e4f30c5ec8
+      size: 2307422
+    - path: brick/AccessoryFiles/LinguisticVariants/itIT16LinguisticVariant.parquet
+      hash: md5
+      md5: c41039fa7d10bd39a8359faba07958be
+      size: 3850162
+    - path: brick/AccessoryFiles/LinguisticVariants/koKR13LinguisticVariant.parquet
+      hash: md5
+      md5: 2e750d6ef449f0e5749cac50fa6cd552
+      size: 460164
+    - path: brick/AccessoryFiles/LinguisticVariants/nlNL22LinguisticVariant.parquet
+      hash: md5
+      md5: 00b6661f3b60c294d19325173e4d8549
+      size: 2486376
+    - path: brick/AccessoryFiles/LinguisticVariants/plPL29LinguisticVariant.parquet
+      hash: md5
+      md5: e8c776904b14e495e1d8ef6081fb82e6
+      size: 1513692
+    - path: brick/AccessoryFiles/LinguisticVariants/ptBR11LinguisticVariant.parquet
+      hash: md5
+      md5: c07210cf7ef6924742d44c01be4f977b
+      size: 4071431
+    - path: brick/AccessoryFiles/LinguisticVariants/ruRU20LinguisticVariant.parquet
+      hash: md5
+      md5: 2c98daeaa327d345f3607075ae676697
+      size: 2083840
+    - path: brick/AccessoryFiles/LinguisticVariants/trTR19LinguisticVariant.parquet
+      hash: md5
+      md5: fc62049525ef8375aed75bcd8886bb16
+      size: 948041
+    - path: brick/AccessoryFiles/LinguisticVariants/ukUA30LinguisticVariant.parquet
+      hash: md5
+      md5: c234d1184f0ff2103a5b42f254a0bf42
+      size: 552727
+    - path: brick/AccessoryFiles/LinguisticVariants/zhCN5LinguisticVariant.parquet
+      hash: md5
+      md5: c894aa2c0199c1dd36aeefa8451fadf9
+      size: 15840982
+    - path: 
+        brick/AccessoryFiles/LoincIeeeMedicalDeviceCodeMappingTable/LoincIeeeMedicalDeviceCodeMappingTable.parquet
+      hash: md5
+      md5: 7a8ddd6e306293e51f4ee097708a5a88
+      size: 29654
+    - path: 
+        brick/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.parquet
+      hash: md5
+      md5: 6b6cb9d3eb5a488c077b4d57f5d55110
+      size: 552474
+    - path: 
+        brick/AccessoryFiles/LoincUniversalLabOrdersValueSet/LoincUniversalLabOrdersValueSet.parquet
+      hash: md5
+      md5: 3603d9c7df840677e73f82300400e4a4
+      size: 42860
+    - path: brick/AccessoryFiles/PanelsAndForms/AnswerList.parquet
+      hash: md5
+      md5: 9df158c549c52d9afe3483f4a12e2096
+      size: 915384
+    - path: brick/AccessoryFiles/PanelsAndForms/Loinc.parquet
       hash: md5
       md5: 0c514b14118546d6c28e15cdee3c1dff
       size: 15328524
-    - path: brick/MapTo.parquet
+    - path: brick/AccessoryFiles/PanelsAndForms/LoincAnswerListLink.parquet
+      hash: md5
+      md5: 2fdcefdc523f918903a604809d32482d
+      size: 936929
+    - path: brick/AccessoryFiles/PanelsAndForms/PanelsAndForms.parquet
+      hash: md5
+      md5: 8df289dcb152e9f89070d2221ab163e0
+      size: 3158210
+    - path: brick/AccessoryFiles/PartFile/LoincPartLink_Primary.parquet
+      hash: md5
+      md5: 863a46cc8b0b9e79e65e269d6ff51f10
+      size: 8950531
+    - path: brick/AccessoryFiles/PartFile/LoincPartLink_Supplementary.parquet
+      hash: md5
+      md5: ad3c8156538958a296921af96853795d
+      size: 11978103
+    - path: brick/AccessoryFiles/PartFile/Part.parquet
+      hash: md5
+      md5: 4b473c1430f3fddff2f6636c1e720161
+      size: 2994110
+    - path: brick/AccessoryFiles/PartFile/PartRelatedCodeMapping.parquet
+      hash: md5
+      md5: 3254d6e9a23067b6342b03a6bb12f465
+      size: 561222
+    - path: brick/AccessoryFiles/Updates/Updates.parquet
+      hash: md5
+      md5: 1a8996f618885b3f980fba6763092fca
+      size: 88449
+    - path: brick/AccessoryFiles/Updates/UpdatesAdditionalFields.parquet
+      hash: md5
+      md5: 602f520800cbb566cfaa6b908a7278e5
+      size: 698315
+    - path: brick/LoincTable/Loinc.parquet
+      hash: md5
+      md5: 0c514b14118546d6c28e15cdee3c1dff
+      size: 15328524
+    - path: brick/LoincTable/MapTo.parquet
+      hash: md5
+      md5: c899fa64c9e26885b7eb2205acf596ae
+      size: 71239
+    - path: brick/LoincTable/SourceOrganization.parquet
+      hash: md5
+      md5: e5fabb7207a776b203f926588a517d3e
+      size: 28776
+    - path: brick/LoincTableCore/LoincTableCore.parquet
+      hash: md5
+      md5: 6dac17c83a5cdc6fdec94a801f9da24e
+      size: 5834496
+    - path: brick/LoincTableCore/MapTo.parquet
       hash: md5
       md5: c899fa64c9e26885b7eb2205acf596ae
       size: 71239
   unzip:
-    cmd: mkdir -p "raw"; unzip download/Loinc.zip -d raw/
+    cmd: stages/02_unzip.sh
     deps:
     - path: download/Loinc.zip
       hash: md5
       md5: 09382b5adcb37cb0b66ffe61ee9dec58
       size: 81421626
+    - path: stages/02_unzip.sh
+      hash: md5
+      md5: 166d929ee845df76564d2abc617c04d7
+      size: 352
     outs:
     - path: raw
       hash: md5
       md5: f8344774cb3cdab3caed0ac75fbe17c8.dir
       size: 947507303
       nfiles: 74
+  process-non-csv:
+    cmd: stages/04_build-non-csv.sh
+    deps:
+    - path: raw
+      hash: md5
+      md5: f8344774cb3cdab3caed0ac75fbe17c8.dir
+      size: 947507303
+      nfiles: 74
+    - path: stages/04_build-non-csv.sh
+      hash: md5
+      md5: f48a366724a762e1b8a38989c06bc22c
+      size: 992
+    outs:
+    - path: brick/AccessoryFiles/DocumentOntologyOwl/DocumentOntology.owl
+      hash: md5
+      md5: 07a161798dd7a2101dbc21051b4d2c25
+      size: 2224829
+    - path: brick/loinc.xml
+      hash: md5
+      md5: d2c97c4c498840ef25a10e1724770c15
+      size: 34254
