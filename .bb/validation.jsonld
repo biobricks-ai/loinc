@@ -1,0 +1,4125 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "prov:Entity",
+  "schema:name": "loinc validation report",
+  "prov:generatedAtTime": "2026-07-06T08:39:10Z",
+  "bb:validator": "tools/bb_validate.py",
+  "bb:verdict": "WARN",
+  "bb:summary": {
+    "n_parquet_files": 53,
+    "total_rows": 3961495,
+    "total_bytes": 127696731,
+    "note": ""
+  },
+  "bb:deterministic_checks": [
+    {
+      "file": "AnswerList.parquet",
+      "path": "loinc/brick/AccessoryFiles/AnswerFile/AnswerList.parquet",
+      "rows": 30753,
+      "cols": 19,
+      "bytes": 907997,
+      "columns": [
+        {
+          "name": "AnswerListId",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListName",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListOID",
+          "type": "string"
+        },
+        {
+          "name": "ExtDefinedYN",
+          "type": "string"
+        },
+        {
+          "name": "ExtDefinedAnswerListCodeSystem",
+          "type": "string"
+        },
+        {
+          "name": "ExtDefinedAnswerListLink",
+          "type": "string"
+        },
+        {
+          "name": "AnswerStringId",
+          "type": "string"
+        },
+        {
+          "name": "LocalAnswerCode",
+          "type": "string"
+        },
+        {
+          "name": "LocalAnswerCodeSystem",
+          "type": "string"
+        },
+        {
+          "name": "SequenceNumber",
+          "type": "string"
+        },
+        {
+          "name": "DisplayText",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeId",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeDisplayName",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeSystem",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeSystemVersion",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeSystemCopyrightNotice",
+          "type": "string"
+        },
+        {
+          "name": "SubsequentTextPrompt",
+          "type": "string"
+        },
+        {
+          "name": "Description",
+          "type": "string"
+        },
+        {
+          "name": "Score",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "AnswerListId": 0.0,
+        "AnswerListName": 0.0,
+        "AnswerListOID": 0.0,
+        "ExtDefinedYN": 0.0,
+        "ExtDefinedAnswerListCodeSystem": 0.942152,
+        "ExtDefinedAnswerListLink": 0.99483,
+        "AnswerStringId": 0.002114,
+        "LocalAnswerCode": 0.558677,
+        "LocalAnswerCodeSystem": 0.995903,
+        "SequenceNumber": 0.002114,
+        "DisplayText": 0.002504,
+        "ExtCodeId": 0.920138,
+        "ExtCodeDisplayName": 0.921016,
+        "ExtCodeSystem": 0.920138,
+        "ExtCodeSystemVersion": 0.925958,
+        "ExtCodeSystemCopyrightNotice": 0.923682,
+        "SubsequentTextPrompt": 0.992814,
+        "Description": 0.976132,
+        "Score": 0.920105
+      },
+      "all_null_columns": [],
+      "sample_rows": 30753,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "LoincAnswerListLink.parquet",
+      "path": "loinc/brick/AccessoryFiles/AnswerFile/LoincAnswerListLink.parquet",
+      "rows": 29233,
+      "cols": 6,
+      "bytes": 931033,
+      "columns": [
+        {
+          "name": "LoincNumber",
+          "type": "string"
+        },
+        {
+          "name": "LongCommonName",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListId",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListName",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListLinkType",
+          "type": "string"
+        },
+        {
+          "name": "ApplicableContext",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LoincNumber": 0.0,
+        "LongCommonName": 0.0,
+        "AnswerListId": 0.0,
+        "AnswerListName": 0.0,
+        "AnswerListLinkType": 0.0,
+        "ApplicableContext": 0.791298
+      },
+      "all_null_columns": [],
+      "sample_rows": 29233,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "LoincChangeSnapshot.parquet",
+      "path": "loinc/brick/AccessoryFiles/ChangeSnapshot/LoincChangeSnapshot.parquet",
+      "rows": 1230,
+      "cols": 6,
+      "bytes": 32332,
+      "columns": [
+        {
+          "name": "VersionEffective",
+          "type": "string"
+        },
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "Property",
+          "type": "string"
+        },
+        {
+          "name": "ValuePrior",
+          "type": "string"
+        },
+        {
+          "name": "ValueCurrent",
+          "type": "string"
+        },
+        {
+          "name": "ChangeReason",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "VersionEffective": 0.0,
+        "LOINC_NUM": 0.0,
+        "Property": 0.0,
+        "ValuePrior": 0.034146,
+        "ValueCurrent": 0.042276,
+        "ChangeReason": 0.57561
+      },
+      "all_null_columns": [],
+      "sample_rows": 1230,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "PartChangeSnapshot.parquet",
+      "path": "loinc/brick/AccessoryFiles/ChangeSnapshot/PartChangeSnapshot.parquet",
+      "rows": 46,
+      "cols": 6,
+      "bytes": 2280,
+      "columns": [
+        {
+          "name": "VersionEffective",
+          "type": "string"
+        },
+        {
+          "name": "PartNumber",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "ValuePrior",
+          "type": "string"
+        },
+        {
+          "name": "ValueCurrent",
+          "type": "string"
+        },
+        {
+          "name": "ChangeReason",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "VersionEffective": 0.0,
+        "PartNumber": 0.0,
+        "PROPERTY": 0.0,
+        "ValuePrior": 0.0,
+        "ValueCurrent": 0.0,
+        "ChangeReason": 0.826087
+      },
+      "all_null_columns": [],
+      "sample_rows": 46,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "VersionEffective",
+        "PROPERTY"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ComponentHierarchyBySystem.parquet",
+      "path": "loinc/brick/AccessoryFiles/ComponentHierarchyBySystem/ComponentHierarchyBySystem.parquet",
+      "rows": 184540,
+      "cols": 5,
+      "bytes": 5195795,
+      "columns": [
+        {
+          "name": "PATH_TO_ROOT",
+          "type": "string"
+        },
+        {
+          "name": "SEQUENCE",
+          "type": "string"
+        },
+        {
+          "name": "IMMEDIATE_PARENT",
+          "type": "string"
+        },
+        {
+          "name": "CODE",
+          "type": "string"
+        },
+        {
+          "name": "CODE_TEXT",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "PATH_TO_ROOT": 5e-06,
+        "SEQUENCE": 0.0,
+        "IMMEDIATE_PARENT": 5e-06,
+        "CODE": 0.0,
+        "CODE_TEXT": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0255,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ConsumerName.parquet",
+      "path": "loinc/brick/AccessoryFiles/ConsumerName/ConsumerName.parquet",
+      "rows": 66790,
+      "cols": 2,
+      "bytes": 1109671,
+      "columns": [
+        {
+          "name": "LoincNumber",
+          "type": "string"
+        },
+        {
+          "name": "ConsumerName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LoincNumber": 0.0,
+        "ConsumerName": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "DocumentOntology.parquet",
+      "path": "loinc/brick/AccessoryFiles/DocumentOntology/DocumentOntology.parquet",
+      "rows": 13928,
+      "cols": 5,
+      "bytes": 79238,
+      "columns": [
+        {
+          "name": "LoincNumber",
+          "type": "string"
+        },
+        {
+          "name": "PartNumber",
+          "type": "string"
+        },
+        {
+          "name": "PartTypeName",
+          "type": "string"
+        },
+        {
+          "name": "PartSequenceOrder",
+          "type": "string"
+        },
+        {
+          "name": "PartName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LoincNumber": 0.0,
+        "PartNumber": 0.0,
+        "PartTypeName": 0.0,
+        "PartSequenceOrder": 0.0,
+        "PartName": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 13928,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "Group.parquet",
+      "path": "loinc/brick/AccessoryFiles/GroupFile/Group.parquet",
+      "rows": 7383,
+      "cols": 6,
+      "bytes": 169768,
+      "columns": [
+        {
+          "name": "ParentGroupId",
+          "type": "string"
+        },
+        {
+          "name": "GroupId",
+          "type": "string"
+        },
+        {
+          "name": "Group",
+          "type": "string"
+        },
+        {
+          "name": "Archetype",
+          "type": "string"
+        },
+        {
+          "name": "Status",
+          "type": "string"
+        },
+        {
+          "name": "VersionFirstReleased",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ParentGroupId": 0.0,
+        "GroupId": 0.0,
+        "Group": 0.0,
+        "Archetype": 0.805499,
+        "Status": 0.0,
+        "VersionFirstReleased": 1.0
+      },
+      "all_null_columns": [
+        "VersionFirstReleased"
+      ],
+      "sample_rows": 7383,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "VersionFirstReleased"
+      ],
+      "warnings": [
+        "all-null columns: ['VersionFirstReleased']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "GroupAttributes.parquet",
+      "path": "loinc/brick/AccessoryFiles/GroupFile/GroupAttributes.parquet",
+      "rows": 1491,
+      "cols": 4,
+      "bytes": 18420,
+      "columns": [
+        {
+          "name": "ParentGroupId",
+          "type": "string"
+        },
+        {
+          "name": "GroupId",
+          "type": "string"
+        },
+        {
+          "name": "Type",
+          "type": "string"
+        },
+        {
+          "name": "Value",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ParentGroupId": 0.0,
+        "GroupId": 0.0,
+        "Type": 0.0,
+        "Value": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1491,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "GroupLoincTerms.parquet",
+      "path": "loinc/brick/AccessoryFiles/GroupFile/GroupLoincTerms.parquet",
+      "rows": 43352,
+      "cols": 5,
+      "bytes": 823543,
+      "columns": [
+        {
+          "name": "Category",
+          "type": "string"
+        },
+        {
+          "name": "GroupId",
+          "type": "string"
+        },
+        {
+          "name": "Archetype",
+          "type": "string"
+        },
+        {
+          "name": "LoincNumber",
+          "type": "string"
+        },
+        {
+          "name": "LongCommonName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "Category": 0.002514,
+        "GroupId": 0.0,
+        "Archetype": 0.905125,
+        "LoincNumber": 0.0,
+        "LongCommonName": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 43352,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ParentGroup.parquet",
+      "path": "loinc/brick/AccessoryFiles/GroupFile/ParentGroup.parquet",
+      "rows": 62,
+      "cols": 3,
+      "bytes": 3341,
+      "columns": [
+        {
+          "name": "ParentGroupId",
+          "type": "string"
+        },
+        {
+          "name": "ParentGroup",
+          "type": "string"
+        },
+        {
+          "name": "Status",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ParentGroupId": 0.0,
+        "ParentGroup": 0.0,
+        "Status": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 62,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "Status"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ParentGroupAttributes.parquet",
+      "path": "loinc/brick/AccessoryFiles/GroupFile/ParentGroupAttributes.parquet",
+      "rows": 62,
+      "cols": 3,
+      "bytes": 9069,
+      "columns": [
+        {
+          "name": "ParentGroupId",
+          "type": "string"
+        },
+        {
+          "name": "Type",
+          "type": "string"
+        },
+        {
+          "name": "Value",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ParentGroupId": 0.0,
+        "Type": 0.0,
+        "Value": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 62,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "Type"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "ImagingDocumentCodes.parquet",
+      "path": "loinc/brick/AccessoryFiles/ImagingDocuments/ImagingDocumentCodes.parquet",
+      "rows": 7006,
+      "cols": 2,
+      "bytes": 150510,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "LONG_COMMON_NAME": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 7006,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "LinguisticVariants.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/LinguisticVariants.parquet",
+      "rows": 21,
+      "cols": 5,
+      "bytes": 3530,
+      "columns": [
+        {
+          "name": "ID",
+          "type": "string"
+        },
+        {
+          "name": "ISO_LANGUAGE",
+          "type": "string"
+        },
+        {
+          "name": "ISO_COUNTRY",
+          "type": "string"
+        },
+        {
+          "name": "LANGUAGE_NAME",
+          "type": "string"
+        },
+        {
+          "name": "PRODUCER",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ID": 0.0,
+        "ISO_LANGUAGE": 0.0,
+        "ISO_COUNTRY": 0.0,
+        "LANGUAGE_NAME": 0.0,
+        "PRODUCER": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 21,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "arJO32LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/arJO32LinguisticVariant.parquet",
+      "rows": 260,
+      "cols": 12,
+      "bytes": 25443,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 1.0,
+        "PROPERTY": 1.0,
+        "TIME_ASPCT": 1.0,
+        "SYSTEM": 1.0,
+        "SCALE_TYP": 1.0,
+        "METHOD_TYP": 1.0,
+        "CLASS": 1.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 0.0,
+        "RELATEDNAMES2": 0.0,
+        "LinguisticVariantDisplayName": 0.0
+      },
+      "all_null_columns": [
+        "COMPONENT",
+        "PROPERTY",
+        "TIME_ASPCT",
+        "SYSTEM",
+        "SCALE_TYP",
+        "METHOD_TYP",
+        "CLASS",
+        "SHORTNAME"
+      ],
+      "sample_rows": 260,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "COMPONENT",
+        "PROPERTY",
+        "TIME_ASPCT",
+        "SYSTEM",
+        "SCALE_TYP",
+        "METHOD_TYP",
+        "CLASS",
+        "SHORTNAME"
+      ],
+      "warnings": [
+        "all-null columns: ['COMPONENT', 'PROPERTY', 'TIME_ASPCT', 'SYSTEM', 'SCALE_TYP', 'METHOD_TYP', 'CLASS', 'SHORTNAME']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "csCZ33LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/csCZ33LinguisticVariant.parquet",
+      "rows": 1234,
+      "cols": 12,
+      "bytes": 56011,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.795786,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 0.0,
+        "RELATEDNAMES2": 1.0,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "RELATEDNAMES2",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 1234,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "RELATEDNAMES2",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'RELATEDNAMES2', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "deAT24LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/deAT24LinguisticVariant.parquet",
+      "rows": 7296,
+      "cols": 12,
+      "bytes": 271017,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.966557,
+        "PROPERTY": 0.966557,
+        "TIME_ASPCT": 0.966557,
+        "SYSTEM": 0.966557,
+        "SCALE_TYP": 0.966557,
+        "METHOD_TYP": 0.968202,
+        "CLASS": 0.966557,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.002604,
+        "LinguisticVariantDisplayName": 0.037007
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME"
+      ],
+      "sample_rows": 7296,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "deDE15LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/deDE15LinguisticVariant.parquet",
+      "rows": 18446,
+      "cols": 12,
+      "bytes": 753521,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.528461,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 0.0,
+        "RELATEDNAMES2": 0.769327,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 18446,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "elGR17LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/elGR17LinguisticVariant.parquet",
+      "rows": 91351,
+      "cols": 12,
+      "bytes": 6669829,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.493405,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.0,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "esAR7LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/esAR7LinguisticVariant.parquet",
+      "rows": 38293,
+      "cols": 12,
+      "bytes": 1533871,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.000653,
+        "TIME_ASPCT": 2.6e-05,
+        "SYSTEM": 0.000627,
+        "SCALE_TYP": 0.000679,
+        "METHOD_TYP": 0.59298,
+        "CLASS": 0.0,
+        "SHORTNAME": 0.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 1.0,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "LONG_COMMON_NAME",
+        "RELATEDNAMES2",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 38293,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "LONG_COMMON_NAME",
+        "RELATEDNAMES2",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['LONG_COMMON_NAME', 'RELATEDNAMES2', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "esES12LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/esES12LinguisticVariant.parquet",
+      "rows": 63185,
+      "cols": 12,
+      "bytes": 1296113,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.593115,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.384949,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "esMX28LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/esMX28LinguisticVariant.parquet",
+      "rows": 83231,
+      "cols": 12,
+      "bytes": 3981502,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.503863,
+        "CLASS": 1.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 0.0,
+        "RELATEDNAMES2": 1.0,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "CLASS",
+        "SHORTNAME",
+        "RELATEDNAMES2",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "CLASS",
+        "SHORTNAME",
+        "RELATEDNAMES2",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['CLASS', 'SHORTNAME', 'RELATEDNAMES2', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "etEE10LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/etEE10LinguisticVariant.parquet",
+      "rows": 29291,
+      "cols": 12,
+      "bytes": 520019,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.786692,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.0,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 29291,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "frBE23LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/frBE23LinguisticVariant.parquet",
+      "rows": 42977,
+      "cols": 12,
+      "bytes": 832572,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.676943,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.485888,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 42977,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "frCA8LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/frCA8LinguisticVariant.parquet",
+      "rows": 49693,
+      "cols": 12,
+      "bytes": 871045,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.643753,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.972612,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 49693,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "frFR18LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/frFR18LinguisticVariant.parquet",
+      "rows": 58356,
+      "cols": 12,
+      "bytes": 2298944,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 3.4e-05,
+        "SYSTEM": 1.7e-05,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.592056,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 3.4e-05,
+        "RELATEDNAMES2": 1.0,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "RELATEDNAMES2",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "RELATEDNAMES2",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'RELATEDNAMES2', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "itIT16LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/itIT16LinguisticVariant.parquet",
+      "rows": 92147,
+      "cols": 12,
+      "bytes": 3821585,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.493711,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.0,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "koKR13LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/koKR13LinguisticVariant.parquet",
+      "rows": 26893,
+      "cols": 12,
+      "bytes": 457455,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.000149,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.670063,
+        "CLASS": 1.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 1.0,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "CLASS",
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "RELATEDNAMES2",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 26893,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "CLASS",
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "RELATEDNAMES2",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['CLASS', 'SHORTNAME', 'LONG_COMMON_NAME', 'RELATEDNAMES2', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "nlNL22LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/nlNL22LinguisticVariant.parquet",
+      "rows": 62523,
+      "cols": 12,
+      "bytes": 2475766,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.5874,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 0.0,
+        "RELATEDNAMES2": 0.403372,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "plPL29LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/plPL29LinguisticVariant.parquet",
+      "rows": 42130,
+      "cols": 12,
+      "bytes": 1502853,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.543959,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.184785,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 42130,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "ptBR11LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/ptBR11LinguisticVariant.parquet",
+      "rows": 58468,
+      "cols": 12,
+      "bytes": 4070859,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 1.7e-05,
+        "PROPERTY": 0.131935,
+        "TIME_ASPCT": 1.7e-05,
+        "SYSTEM": 0.000445,
+        "SCALE_TYP": 0.000154,
+        "METHOD_TYP": 0.589023,
+        "CLASS": 0.0,
+        "SHORTNAME": 0.105528,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.099131,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "ruRU20LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/ruRU20LinguisticVariant.parquet",
+      "rows": 56752,
+      "cols": 12,
+      "bytes": 2070768,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.65247,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.000264,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "trTR19LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/trTR19LinguisticVariant.parquet",
+      "rows": 49841,
+      "cols": 12,
+      "bytes": 939519,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.653819,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.4842,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 49841,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "ukUA30LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/ukUA30LinguisticVariant.parquet",
+      "rows": 3159,
+      "cols": 12,
+      "bytes": 547712,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.575815,
+        "CLASS": 0.0,
+        "SHORTNAME": 0.0,
+        "LONG_COMMON_NAME": 0.0,
+        "RELATEDNAMES2": 0.0,
+        "LinguisticVariantDisplayName": 0.006015
+      },
+      "all_null_columns": [],
+      "sample_rows": 3159,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "zhCN5LinguisticVariant.parquet",
+      "path": "loinc/brick/AccessoryFiles/LinguisticVariants/zhCN5LinguisticVariant.parquet",
+      "rows": 92188,
+      "cols": 12,
+      "bytes": 15806339,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "LinguisticVariantDisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.493709,
+        "CLASS": 0.0,
+        "SHORTNAME": 1.0,
+        "LONG_COMMON_NAME": 1.0,
+        "RELATEDNAMES2": 0.0,
+        "LinguisticVariantDisplayName": 1.0
+      },
+      "all_null_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "SHORTNAME",
+        "LONG_COMMON_NAME",
+        "LinguisticVariantDisplayName"
+      ],
+      "warnings": [
+        "all-null columns: ['SHORTNAME', 'LONG_COMMON_NAME', 'LinguisticVariantDisplayName']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "LoincIeeeMedicalDeviceCodeMappingTable.parquet",
+      "path": "loinc/brick/AccessoryFiles/LoincIeeeMedicalDeviceCodeMappingTable/LoincIeeeMedicalDeviceCodeMappingTable.parquet",
+      "rows": 646,
+      "cols": 5,
+      "bytes": 27175,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "LOINC_LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "IEEE_CF_CODE10",
+          "type": "string"
+        },
+        {
+          "name": "IEEE_REFID",
+          "type": "string"
+        },
+        {
+          "name": "EQUIVALENCE",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "LOINC_LONG_COMMON_NAME": 0.0,
+        "IEEE_CF_CODE10": 0.0,
+        "IEEE_REFID": 0.0,
+        "EQUIVALENCE": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 646,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "LoincRsnaRadiologyPlaybook.parquet",
+      "path": "loinc/brick/AccessoryFiles/LoincRsnaRadiologyPlaybook/LoincRsnaRadiologyPlaybook.parquet",
+      "rows": 49309,
+      "cols": 10,
+      "bytes": 541606,
+      "columns": [
+        {
+          "name": "LoincNumber",
+          "type": "string"
+        },
+        {
+          "name": "LongCommonName",
+          "type": "string"
+        },
+        {
+          "name": "PartNumber",
+          "type": "string"
+        },
+        {
+          "name": "PartTypeName",
+          "type": "string"
+        },
+        {
+          "name": "PartName",
+          "type": "string"
+        },
+        {
+          "name": "PartSequenceOrder",
+          "type": "string"
+        },
+        {
+          "name": "RID",
+          "type": "string"
+        },
+        {
+          "name": "PreferredName",
+          "type": "string"
+        },
+        {
+          "name": "RPID",
+          "type": "string"
+        },
+        {
+          "name": "LongName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LoincNumber": 0.0,
+        "LongCommonName": 0.0,
+        "PartNumber": 0.0,
+        "PartTypeName": 0.0,
+        "PartName": 0.0,
+        "PartSequenceOrder": 0.0,
+        "RID": 0.0,
+        "PreferredName": 0.0,
+        "RPID": 0.858484,
+        "LongName": 0.858484
+      },
+      "all_null_columns": [],
+      "sample_rows": 49309,
+      "sample_dup_fraction": 0.0053,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "LoincUniversalLabOrdersValueSet.parquet",
+      "path": "loinc/brick/AccessoryFiles/LoincUniversalLabOrdersValueSet/LoincUniversalLabOrdersValueSet.parquet",
+      "rows": 1519,
+      "cols": 3,
+      "bytes": 40715,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "ORDER_OBS",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "LONG_COMMON_NAME": 0.0,
+        "ORDER_OBS": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 1519,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "AnswerList.parquet",
+      "path": "loinc/brick/AccessoryFiles/PanelsAndForms/AnswerList.parquet",
+      "rows": 30753,
+      "cols": 19,
+      "bytes": 907997,
+      "columns": [
+        {
+          "name": "AnswerListId",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListName",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListOID",
+          "type": "string"
+        },
+        {
+          "name": "ExtDefinedYN",
+          "type": "string"
+        },
+        {
+          "name": "ExtDefinedAnswerListCodeSystem",
+          "type": "string"
+        },
+        {
+          "name": "ExtDefinedAnswerListLink",
+          "type": "string"
+        },
+        {
+          "name": "AnswerStringId",
+          "type": "string"
+        },
+        {
+          "name": "LocalAnswerCode",
+          "type": "string"
+        },
+        {
+          "name": "LocalAnswerCodeSystem",
+          "type": "string"
+        },
+        {
+          "name": "SequenceNumber",
+          "type": "string"
+        },
+        {
+          "name": "DisplayText",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeId",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeDisplayName",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeSystem",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeSystemVersion",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeSystemCopyrightNotice",
+          "type": "string"
+        },
+        {
+          "name": "SubsequentTextPrompt",
+          "type": "string"
+        },
+        {
+          "name": "Description",
+          "type": "string"
+        },
+        {
+          "name": "Score",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "AnswerListId": 0.0,
+        "AnswerListName": 0.0,
+        "AnswerListOID": 0.0,
+        "ExtDefinedYN": 0.0,
+        "ExtDefinedAnswerListCodeSystem": 0.942152,
+        "ExtDefinedAnswerListLink": 0.99483,
+        "AnswerStringId": 0.002114,
+        "LocalAnswerCode": 0.558677,
+        "LocalAnswerCodeSystem": 0.995903,
+        "SequenceNumber": 0.002114,
+        "DisplayText": 0.002504,
+        "ExtCodeId": 0.920138,
+        "ExtCodeDisplayName": 0.921016,
+        "ExtCodeSystem": 0.920138,
+        "ExtCodeSystemVersion": 0.925958,
+        "ExtCodeSystemCopyrightNotice": 0.923682,
+        "SubsequentTextPrompt": 0.992814,
+        "Description": 0.976132,
+        "Score": 0.920105
+      },
+      "all_null_columns": [],
+      "sample_rows": 30753,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "Loinc.parquet",
+      "path": "loinc/brick/AccessoryFiles/PanelsAndForms/Loinc.parquet",
+      "rows": 108248,
+      "cols": 40,
+      "bytes": 15317547,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "VersionLastChanged",
+          "type": "string"
+        },
+        {
+          "name": "CHNG_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "DefinitionDescription",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "CONSUMER_NAME",
+          "type": "string"
+        },
+        {
+          "name": "CLASSTYPE",
+          "type": "string"
+        },
+        {
+          "name": "FORMULA",
+          "type": "string"
+        },
+        {
+          "name": "EXMPL_ANSWERS",
+          "type": "string"
+        },
+        {
+          "name": "SURVEY_QUEST_TEXT",
+          "type": "string"
+        },
+        {
+          "name": "SURVEY_QUEST_SRC",
+          "type": "string"
+        },
+        {
+          "name": "UNITSREQUIRED",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "ORDER_OBS",
+          "type": "string"
+        },
+        {
+          "name": "HL7_FIELD_SUBFIELD_ID",
+          "type": "string"
+        },
+        {
+          "name": "EXTERNAL_COPYRIGHT_NOTICE",
+          "type": "string"
+        },
+        {
+          "name": "EXAMPLE_UNITS",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "EXAMPLE_UCUM_UNITS",
+          "type": "string"
+        },
+        {
+          "name": "STATUS_REASON",
+          "type": "string"
+        },
+        {
+          "name": "STATUS_TEXT",
+          "type": "string"
+        },
+        {
+          "name": "CHANGE_REASON_PUBLIC",
+          "type": "string"
+        },
+        {
+          "name": "COMMON_TEST_RANK",
+          "type": "string"
+        },
+        {
+          "name": "COMMON_ORDER_RANK",
+          "type": "string"
+        },
+        {
+          "name": "HL7_ATTACHMENT_STRUCTURE",
+          "type": "string"
+        },
+        {
+          "name": "EXTERNAL_COPYRIGHT_LINK",
+          "type": "string"
+        },
+        {
+          "name": "PanelType",
+          "type": "string"
+        },
+        {
+          "name": "AskAtOrderEntry",
+          "type": "string"
+        },
+        {
+          "name": "AssociatedObservations",
+          "type": "string"
+        },
+        {
+          "name": "VersionFirstReleased",
+          "type": "string"
+        },
+        {
+          "name": "ValidHL7AttachmentRequest",
+          "type": "string"
+        },
+        {
+          "name": "DisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.464203,
+        "CLASS": 0.0,
+        "VersionLastChanged": 0.0,
+        "CHNG_TYPE": 0.0,
+        "DefinitionDescription": 0.856265,
+        "STATUS": 0.0,
+        "CONSUMER_NAME": 1.0,
+        "CLASSTYPE": 0.0,
+        "FORMULA": 0.993071,
+        "EXMPL_ANSWERS": 0.954881,
+        "SURVEY_QUEST_TEXT": 0.921643,
+        "SURVEY_QUEST_SRC": 0.907084,
+        "UNITSREQUIRED": 0.350732,
+        "RELATEDNAMES2": 0.0,
+        "SHORTNAME": 0.1233,
+        "ORDER_OBS": 0.140769,
+        "HL7_FIELD_SUBFIELD_ID": 0.999104,
+        "EXTERNAL_COPYRIGHT_NOTICE": 0.932516,
+        "EXAMPLE_UNITS": 0.629776,
+        "LONG_COMMON_NAME": 0.0,
+        "EXAMPLE_UCUM_UNITS": 0.601295,
+        "STATUS_REASON": 0.974531,
+        "STATUS_TEXT": 0.965126,
+        "CHANGE_REASON_PUBLIC": 0.671514,
+        "COMMON_TEST_RANK": 0.0,
+        "COMMON_ORDER_RANK": 0.0,
+        "HL7_ATTACHMENT_STRUCTURE": 0.924322,
+        "EXTERNAL_COPYRIGHT_LINK": 0.932516,
+        "PanelType": 0.952821,
+        "AskAtOrderEntry": 0.9994,
+        "AssociatedObservations": 0.919352,
+        "VersionFirstReleased": 0.0,
+        "ValidHL7AttachmentRequest": 0.998818,
+        "DisplayName": 0.385014
+      },
+      "all_null_columns": [
+        "CONSUMER_NAME"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "CONSUMER_NAME"
+      ],
+      "warnings": [
+        "all-null columns: ['CONSUMER_NAME']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "LoincAnswerListLink.parquet",
+      "path": "loinc/brick/AccessoryFiles/PanelsAndForms/LoincAnswerListLink.parquet",
+      "rows": 29233,
+      "cols": 6,
+      "bytes": 931033,
+      "columns": [
+        {
+          "name": "LoincNumber",
+          "type": "string"
+        },
+        {
+          "name": "LongCommonName",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListId",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListName",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListLinkType",
+          "type": "string"
+        },
+        {
+          "name": "ApplicableContext",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LoincNumber": 0.0,
+        "LongCommonName": 0.0,
+        "AnswerListId": 0.0,
+        "AnswerListName": 0.0,
+        "AnswerListLinkType": 0.0,
+        "ApplicableContext": 0.791298
+      },
+      "all_null_columns": [],
+      "sample_rows": 29233,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "PanelsAndForms.parquet",
+      "path": "loinc/brick/AccessoryFiles/PanelsAndForms/PanelsAndForms.parquet",
+      "rows": 96009,
+      "cols": 29,
+      "bytes": 3197700,
+      "columns": [
+        {
+          "name": "ParentId",
+          "type": "string"
+        },
+        {
+          "name": "ParentLoinc",
+          "type": "string"
+        },
+        {
+          "name": "ParentName",
+          "type": "string"
+        },
+        {
+          "name": "ID",
+          "type": "string"
+        },
+        {
+          "name": "SEQUENCE",
+          "type": "string"
+        },
+        {
+          "name": "Loinc",
+          "type": "string"
+        },
+        {
+          "name": "LoincName",
+          "type": "string"
+        },
+        {
+          "name": "DisplayNameForForm",
+          "type": "string"
+        },
+        {
+          "name": "ObservationRequiredInPanel",
+          "type": "string"
+        },
+        {
+          "name": "ObservationIdInForm",
+          "type": "string"
+        },
+        {
+          "name": "SkipLogicHelpText",
+          "type": "string"
+        },
+        {
+          "name": "DefaultValue",
+          "type": "string"
+        },
+        {
+          "name": "EntryType",
+          "type": "string"
+        },
+        {
+          "name": "DataTypeInForm",
+          "type": "string"
+        },
+        {
+          "name": "DataTypeSource",
+          "type": "string"
+        },
+        {
+          "name": "AnswerSequenceOverride",
+          "type": "string"
+        },
+        {
+          "name": "ConditionForInclusion",
+          "type": "string"
+        },
+        {
+          "name": "AllowableAlternative",
+          "type": "string"
+        },
+        {
+          "name": "ObservationCategory",
+          "type": "string"
+        },
+        {
+          "name": "Context",
+          "type": "string"
+        },
+        {
+          "name": "ConsistencyChecks",
+          "type": "string"
+        },
+        {
+          "name": "RelevanceEquation",
+          "type": "string"
+        },
+        {
+          "name": "CodingInstructions",
+          "type": "string"
+        },
+        {
+          "name": "QuestionCardinality",
+          "type": "string"
+        },
+        {
+          "name": "AnswerCardinality",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListIdOverride",
+          "type": "string"
+        },
+        {
+          "name": "AnswerListTypeOverride",
+          "type": "string"
+        },
+        {
+          "name": "EXTERNAL_COPYRIGHT_NOTICE",
+          "type": "string"
+        },
+        {
+          "name": "AdditionalCopyright",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ParentId": 0.0,
+        "ParentLoinc": 0.0,
+        "ParentName": 0.0,
+        "ID": 0.0,
+        "SEQUENCE": 0.0,
+        "Loinc": 0.0,
+        "LoincName": 0.0,
+        "DisplayNameForForm": 0.623567,
+        "ObservationRequiredInPanel": 0.876959,
+        "ObservationIdInForm": 0.582227,
+        "SkipLogicHelpText": 0.950348,
+        "DefaultValue": 0.999948,
+        "EntryType": 0.865658,
+        "DataTypeInForm": 0.999573,
+        "DataTypeSource": 1.0,
+        "AnswerSequenceOverride": 0.998479,
+        "ConditionForInclusion": 0.998156,
+        "AllowableAlternative": 1.0,
+        "ObservationCategory": 1.0,
+        "Context": 0.928121,
+        "ConsistencyChecks": 0.989553,
+        "RelevanceEquation": 0.985876,
+        "CodingInstructions": 0.895343,
+        "QuestionCardinality": 0.997792,
+        "AnswerCardinality": 0.966607,
+        "AnswerListIdOverride": 0.920299,
+        "AnswerListTypeOverride": 0.920299,
+        "EXTERNAL_COPYRIGHT_NOTICE": 0.838244,
+        "AdditionalCopyright": 0.99724
+      },
+      "all_null_columns": [
+        "DataTypeSource",
+        "AllowableAlternative",
+        "ObservationCategory"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "DefaultValue",
+        "DataTypeInForm",
+        "DataTypeSource",
+        "AllowableAlternative",
+        "ObservationCategory",
+        "AdditionalCopyright"
+      ],
+      "warnings": [
+        "all-null columns: ['DataTypeSource', 'AllowableAlternative', 'ObservationCategory']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "LoincPartLink_Primary.parquet",
+      "path": "loinc/brick/AccessoryFiles/PartFile/LoincPartLink_Primary.parquet",
+      "rows": 661338,
+      "cols": 8,
+      "bytes": 8788689,
+      "columns": [
+        {
+          "name": "LoincNumber",
+          "type": "string"
+        },
+        {
+          "name": "LongCommonName",
+          "type": "string"
+        },
+        {
+          "name": "PartNumber",
+          "type": "string"
+        },
+        {
+          "name": "PartName",
+          "type": "string"
+        },
+        {
+          "name": "PartCodeSystem",
+          "type": "string"
+        },
+        {
+          "name": "PartTypeName",
+          "type": "string"
+        },
+        {
+          "name": "LinkTypeName",
+          "type": "string"
+        },
+        {
+          "name": "Property",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LoincNumber": 0.0,
+        "LongCommonName": 0.0,
+        "PartNumber": 0.0,
+        "PartName": 0.0,
+        "PartCodeSystem": 0.0,
+        "PartTypeName": 0.0,
+        "LinkTypeName": 0.0,
+        "Property": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "PartCodeSystem"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "LoincPartLink_Supplementary.parquet",
+      "path": "loinc/brick/AccessoryFiles/PartFile/LoincPartLink_Supplementary.parquet",
+      "rows": 1306724,
+      "cols": 8,
+      "bytes": 12080460,
+      "columns": [
+        {
+          "name": "LoincNumber",
+          "type": "string"
+        },
+        {
+          "name": "LongCommonName",
+          "type": "string"
+        },
+        {
+          "name": "PartNumber",
+          "type": "string"
+        },
+        {
+          "name": "PartName",
+          "type": "string"
+        },
+        {
+          "name": "PartCodeSystem",
+          "type": "string"
+        },
+        {
+          "name": "PartTypeName",
+          "type": "string"
+        },
+        {
+          "name": "LinkTypeName",
+          "type": "string"
+        },
+        {
+          "name": "Property",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LoincNumber": 0.0,
+        "LongCommonName": 0.0,
+        "PartNumber": 0.0,
+        "PartName": 0.0,
+        "PartCodeSystem": 0.0,
+        "PartTypeName": 0.0,
+        "LinkTypeName": 0.0,
+        "Property": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "PartCodeSystem"
+      ],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "Part.parquet",
+      "path": "loinc/brick/AccessoryFiles/PartFile/Part.parquet",
+      "rows": 73491,
+      "cols": 5,
+      "bytes": 2982013,
+      "columns": [
+        {
+          "name": "PartNumber",
+          "type": "string"
+        },
+        {
+          "name": "PartTypeName",
+          "type": "string"
+        },
+        {
+          "name": "PartName",
+          "type": "string"
+        },
+        {
+          "name": "PartDisplayName",
+          "type": "string"
+        },
+        {
+          "name": "Status",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "PartNumber": 0.0,
+        "PartTypeName": 0.0,
+        "PartName": 0.0,
+        "PartDisplayName": 0.0,
+        "Status": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "PartRelatedCodeMapping.parquet",
+      "path": "loinc/brick/AccessoryFiles/PartFile/PartRelatedCodeMapping.parquet",
+      "rows": 15399,
+      "cols": 10,
+      "bytes": 556651,
+      "columns": [
+        {
+          "name": "PartNumber",
+          "type": "string"
+        },
+        {
+          "name": "PartName",
+          "type": "string"
+        },
+        {
+          "name": "PartTypeName",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeId",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeDisplayName",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeSystem",
+          "type": "string"
+        },
+        {
+          "name": "Equivalence",
+          "type": "string"
+        },
+        {
+          "name": "ContentOrigin",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeSystemVersion",
+          "type": "string"
+        },
+        {
+          "name": "ExtCodeSystemCopyrightNotice",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "PartNumber": 0.0,
+        "PartName": 0.0,
+        "PartTypeName": 0.0,
+        "ExtCodeId": 0.0,
+        "ExtCodeDisplayName": 0.0,
+        "ExtCodeSystem": 0.0,
+        "Equivalence": 0.0,
+        "ContentOrigin": 0.566855,
+        "ExtCodeSystemVersion": 0.495292,
+        "ExtCodeSystemCopyrightNotice": 0.566595
+      },
+      "all_null_columns": [],
+      "sample_rows": 15399,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "Updates.parquet",
+      "path": "loinc/brick/AccessoryFiles/Updates/Updates.parquet",
+      "rows": 3943,
+      "cols": 9,
+      "bytes": 84532,
+      "columns": [
+        {
+          "name": "RecType",
+          "type": "string"
+        },
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "RecType": 0.0,
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.728379,
+        "CLASS": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 3943,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "UpdatesAdditionalFields.parquet",
+      "path": "loinc/brick/AccessoryFiles/Updates/UpdatesAdditionalFields.parquet",
+      "rows": 5335,
+      "cols": 41,
+      "bytes": 688890,
+      "columns": [
+        {
+          "name": "RecType",
+          "type": "string"
+        },
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "VersionLastChanged",
+          "type": "string"
+        },
+        {
+          "name": "CHNG_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "DefinitionDescription",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "CONSUMER_NAME",
+          "type": "string"
+        },
+        {
+          "name": "CLASSTYPE",
+          "type": "string"
+        },
+        {
+          "name": "FORMULA",
+          "type": "string"
+        },
+        {
+          "name": "EXMPL_ANSWERS",
+          "type": "string"
+        },
+        {
+          "name": "SURVEY_QUEST_TEXT",
+          "type": "string"
+        },
+        {
+          "name": "SURVEY_QUEST_SRC",
+          "type": "string"
+        },
+        {
+          "name": "UNITSREQUIRED",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "ORDER_OBS",
+          "type": "string"
+        },
+        {
+          "name": "HL7_FIELD_SUBFIELD_ID",
+          "type": "string"
+        },
+        {
+          "name": "EXTERNAL_COPYRIGHT_NOTICE",
+          "type": "string"
+        },
+        {
+          "name": "EXAMPLE_UNITS",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "EXAMPLE_UCUM_UNITS",
+          "type": "string"
+        },
+        {
+          "name": "STATUS_REASON",
+          "type": "string"
+        },
+        {
+          "name": "STATUS_TEXT",
+          "type": "string"
+        },
+        {
+          "name": "CHANGE_REASON_PUBLIC",
+          "type": "string"
+        },
+        {
+          "name": "COMMON_TEST_RANK",
+          "type": "string"
+        },
+        {
+          "name": "COMMON_ORDER_RANK",
+          "type": "string"
+        },
+        {
+          "name": "HL7_ATTACHMENT_STRUCTURE",
+          "type": "string"
+        },
+        {
+          "name": "EXTERNAL_COPYRIGHT_LINK",
+          "type": "string"
+        },
+        {
+          "name": "PanelType",
+          "type": "string"
+        },
+        {
+          "name": "AskAtOrderEntry",
+          "type": "string"
+        },
+        {
+          "name": "AssociatedObservations",
+          "type": "string"
+        },
+        {
+          "name": "VersionFirstReleased",
+          "type": "string"
+        },
+        {
+          "name": "ValidHL7AttachmentRequest",
+          "type": "string"
+        },
+        {
+          "name": "DisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "RecType": 0.0,
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.60881,
+        "CLASS": 0.0,
+        "VersionLastChanged": 0.0,
+        "CHNG_TYPE": 0.0,
+        "DefinitionDescription": 0.359138,
+        "STATUS": 0.0,
+        "CONSUMER_NAME": 1.0,
+        "CLASSTYPE": 0.0,
+        "FORMULA": 0.993252,
+        "EXMPL_ANSWERS": 0.993252,
+        "SURVEY_QUEST_TEXT": 0.992502,
+        "SURVEY_QUEST_SRC": 0.856232,
+        "UNITSREQUIRED": 0.060356,
+        "RELATEDNAMES2": 0.0,
+        "SHORTNAME": 0.066354,
+        "ORDER_OBS": 0.141143,
+        "HL7_FIELD_SUBFIELD_ID": 0.999625,
+        "EXTERNAL_COPYRIGHT_NOTICE": 0.991753,
+        "EXAMPLE_UNITS": 0.841799,
+        "LONG_COMMON_NAME": 0.0,
+        "EXAMPLE_UCUM_UNITS": 0.838425,
+        "STATUS_REASON": 0.999625,
+        "STATUS_TEXT": 0.997938,
+        "CHANGE_REASON_PUBLIC": 0.790628,
+        "COMMON_TEST_RANK": 0.0,
+        "COMMON_ORDER_RANK": 0.0,
+        "HL7_ATTACHMENT_STRUCTURE": 0.995501,
+        "EXTERNAL_COPYRIGHT_LINK": 0.991753,
+        "PanelType": 0.845173,
+        "AskAtOrderEntry": 1.0,
+        "AssociatedObservations": 0.980881,
+        "VersionFirstReleased": 0.0,
+        "ValidHL7AttachmentRequest": 0.997376,
+        "DisplayName": 0.258482
+      },
+      "all_null_columns": [
+        "CONSUMER_NAME",
+        "AskAtOrderEntry"
+      ],
+      "sample_rows": 5335,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "CONSUMER_NAME",
+        "AskAtOrderEntry"
+      ],
+      "warnings": [
+        "all-null columns: ['CONSUMER_NAME', 'AskAtOrderEntry']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "Loinc.parquet",
+      "path": "loinc/brick/LoincTable/Loinc.parquet",
+      "rows": 108248,
+      "cols": 40,
+      "bytes": 15317547,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "VersionLastChanged",
+          "type": "string"
+        },
+        {
+          "name": "CHNG_TYPE",
+          "type": "string"
+        },
+        {
+          "name": "DefinitionDescription",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "CONSUMER_NAME",
+          "type": "string"
+        },
+        {
+          "name": "CLASSTYPE",
+          "type": "string"
+        },
+        {
+          "name": "FORMULA",
+          "type": "string"
+        },
+        {
+          "name": "EXMPL_ANSWERS",
+          "type": "string"
+        },
+        {
+          "name": "SURVEY_QUEST_TEXT",
+          "type": "string"
+        },
+        {
+          "name": "SURVEY_QUEST_SRC",
+          "type": "string"
+        },
+        {
+          "name": "UNITSREQUIRED",
+          "type": "string"
+        },
+        {
+          "name": "RELATEDNAMES2",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "ORDER_OBS",
+          "type": "string"
+        },
+        {
+          "name": "HL7_FIELD_SUBFIELD_ID",
+          "type": "string"
+        },
+        {
+          "name": "EXTERNAL_COPYRIGHT_NOTICE",
+          "type": "string"
+        },
+        {
+          "name": "EXAMPLE_UNITS",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "EXAMPLE_UCUM_UNITS",
+          "type": "string"
+        },
+        {
+          "name": "STATUS_REASON",
+          "type": "string"
+        },
+        {
+          "name": "STATUS_TEXT",
+          "type": "string"
+        },
+        {
+          "name": "CHANGE_REASON_PUBLIC",
+          "type": "string"
+        },
+        {
+          "name": "COMMON_TEST_RANK",
+          "type": "string"
+        },
+        {
+          "name": "COMMON_ORDER_RANK",
+          "type": "string"
+        },
+        {
+          "name": "HL7_ATTACHMENT_STRUCTURE",
+          "type": "string"
+        },
+        {
+          "name": "EXTERNAL_COPYRIGHT_LINK",
+          "type": "string"
+        },
+        {
+          "name": "PanelType",
+          "type": "string"
+        },
+        {
+          "name": "AskAtOrderEntry",
+          "type": "string"
+        },
+        {
+          "name": "AssociatedObservations",
+          "type": "string"
+        },
+        {
+          "name": "VersionFirstReleased",
+          "type": "string"
+        },
+        {
+          "name": "ValidHL7AttachmentRequest",
+          "type": "string"
+        },
+        {
+          "name": "DisplayName",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.464203,
+        "CLASS": 0.0,
+        "VersionLastChanged": 0.0,
+        "CHNG_TYPE": 0.0,
+        "DefinitionDescription": 0.856265,
+        "STATUS": 0.0,
+        "CONSUMER_NAME": 1.0,
+        "CLASSTYPE": 0.0,
+        "FORMULA": 0.993071,
+        "EXMPL_ANSWERS": 0.954881,
+        "SURVEY_QUEST_TEXT": 0.921643,
+        "SURVEY_QUEST_SRC": 0.907084,
+        "UNITSREQUIRED": 0.350732,
+        "RELATEDNAMES2": 0.0,
+        "SHORTNAME": 0.1233,
+        "ORDER_OBS": 0.140769,
+        "HL7_FIELD_SUBFIELD_ID": 0.999104,
+        "EXTERNAL_COPYRIGHT_NOTICE": 0.932516,
+        "EXAMPLE_UNITS": 0.629776,
+        "LONG_COMMON_NAME": 0.0,
+        "EXAMPLE_UCUM_UNITS": 0.601295,
+        "STATUS_REASON": 0.974531,
+        "STATUS_TEXT": 0.965126,
+        "CHANGE_REASON_PUBLIC": 0.671514,
+        "COMMON_TEST_RANK": 0.0,
+        "COMMON_ORDER_RANK": 0.0,
+        "HL7_ATTACHMENT_STRUCTURE": 0.924322,
+        "EXTERNAL_COPYRIGHT_LINK": 0.932516,
+        "PanelType": 0.952821,
+        "AskAtOrderEntry": 0.9994,
+        "AssociatedObservations": 0.919352,
+        "VersionFirstReleased": 0.0,
+        "ValidHL7AttachmentRequest": 0.998818,
+        "DisplayName": 0.385014
+      },
+      "all_null_columns": [
+        "CONSUMER_NAME"
+      ],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [
+        "CONSUMER_NAME"
+      ],
+      "warnings": [
+        "all-null columns: ['CONSUMER_NAME']"
+      ],
+      "status": "WARN"
+    },
+    {
+      "file": "MapTo.parquet",
+      "path": "loinc/brick/LoincTable/MapTo.parquet",
+      "rows": 4646,
+      "cols": 3,
+      "bytes": 69170,
+      "columns": [
+        {
+          "name": "LOINC",
+          "type": "string"
+        },
+        {
+          "name": "MAP_TO",
+          "type": "string"
+        },
+        {
+          "name": "COMMENT",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC": 0.0,
+        "MAP_TO": 0.0,
+        "COMMENT": 0.942746
+      },
+      "all_null_columns": [],
+      "sample_rows": 4646,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "SourceOrganization.parquet",
+      "path": "loinc/brick/LoincTable/SourceOrganization.parquet",
+      "rows": 149,
+      "cols": 6,
+      "bytes": 25792,
+      "columns": [
+        {
+          "name": "ID",
+          "type": "string"
+        },
+        {
+          "name": "COPYRIGHT_ID",
+          "type": "string"
+        },
+        {
+          "name": "NAME",
+          "type": "string"
+        },
+        {
+          "name": "COPYRIGHT",
+          "type": "string"
+        },
+        {
+          "name": "TERMS_OF_USE",
+          "type": "string"
+        },
+        {
+          "name": "URL",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "ID": 0.0,
+        "COPYRIGHT_ID": 0.0,
+        "NAME": 0.0,
+        "COPYRIGHT": 0.0,
+        "TERMS_OF_USE": 0.033557,
+        "URL": 0.362416
+      },
+      "all_null_columns": [],
+      "sample_rows": 149,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "LoincTableCore.parquet",
+      "path": "loinc/brick/LoincTableCore/LoincTableCore.parquet",
+      "rows": 108248,
+      "cols": 15,
+      "bytes": 5830774,
+      "columns": [
+        {
+          "name": "LOINC_NUM",
+          "type": "string"
+        },
+        {
+          "name": "COMPONENT",
+          "type": "string"
+        },
+        {
+          "name": "PROPERTY",
+          "type": "string"
+        },
+        {
+          "name": "TIME_ASPCT",
+          "type": "string"
+        },
+        {
+          "name": "SYSTEM",
+          "type": "string"
+        },
+        {
+          "name": "SCALE_TYP",
+          "type": "string"
+        },
+        {
+          "name": "METHOD_TYP",
+          "type": "string"
+        },
+        {
+          "name": "CLASS",
+          "type": "string"
+        },
+        {
+          "name": "CLASSTYPE",
+          "type": "string"
+        },
+        {
+          "name": "LONG_COMMON_NAME",
+          "type": "string"
+        },
+        {
+          "name": "SHORTNAME",
+          "type": "string"
+        },
+        {
+          "name": "EXTERNAL_COPYRIGHT_NOTICE",
+          "type": "string"
+        },
+        {
+          "name": "STATUS",
+          "type": "string"
+        },
+        {
+          "name": "VersionFirstReleased",
+          "type": "string"
+        },
+        {
+          "name": "VersionLastChanged",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC_NUM": 0.0,
+        "COMPONENT": 0.0,
+        "PROPERTY": 0.0,
+        "TIME_ASPCT": 0.0,
+        "SYSTEM": 0.0,
+        "SCALE_TYP": 0.0,
+        "METHOD_TYP": 0.464203,
+        "CLASS": 0.0,
+        "CLASSTYPE": 0.0,
+        "LONG_COMMON_NAME": 0.0,
+        "SHORTNAME": 0.1233,
+        "EXTERNAL_COPYRIGHT_NOTICE": 0.932516,
+        "STATUS": 0.0,
+        "VersionFirstReleased": 0.0,
+        "VersionLastChanged": 0.0
+      },
+      "all_null_columns": [],
+      "sample_rows": 50000,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    },
+    {
+      "file": "MapTo.parquet",
+      "path": "loinc/brick/LoincTableCore/MapTo.parquet",
+      "rows": 4646,
+      "cols": 3,
+      "bytes": 69170,
+      "columns": [
+        {
+          "name": "LOINC",
+          "type": "string"
+        },
+        {
+          "name": "MAP_TO",
+          "type": "string"
+        },
+        {
+          "name": "COMMENT",
+          "type": "string"
+        }
+      ],
+      "null_fraction": {
+        "LOINC": 0.0,
+        "MAP_TO": 0.0,
+        "COMMENT": 0.942746
+      },
+      "all_null_columns": [],
+      "sample_rows": 4646,
+      "sample_dup_fraction": 0.0,
+      "sample_constant_columns": [],
+      "warnings": [],
+      "status": "PASS"
+    }
+  ],
+  "bb:datapackage_conformance": null,
+  "bb:web_validation": null
+}
