@@ -1,0 +1,52 @@
+{
+  "@context": "../../context/source.context.jsonld",
+  "@type": "dcat:Dataset",
+  "@id": "https://biobricks.ai/bricks/loinc",
+  "dcterms:title": "LOINC (Logical Observation Identifiers Names and Codes)",
+  "dcterms:description": "Parquet build of LOINC, the standard set of identifiers, names, and codes for identifying health measurements, observations, and documents, published by the Regenstrief Institute. Includes the LOINC table core, answer lists, part files, group files, multilingual linguistic variants, and document ontology. Downloaded from loinc.org via an authenticated account and acceptance of the LOINC download license agreement.",
+  "dcterms:license": [
+    {
+      "@id": "https://loinc.org/license/",
+      "dcterms:title": "LOINC License (Regenstrief Institute)"
+    },
+    "proprietary (restricted class proxy: LOINC License is a controlled-access, click-through, copyright-bearing license, not an open/CC license)"
+  ],
+  "biobricks:licenseName": "LOINC License (Regenstrief Institute)",
+  "biobricks:licenseClass": "restricted",
+  "biobricks:merckCommercialUse": "conditional",
+  "dcterms:creator": "Regenstrief Institute, Inc.",
+  "dcterms:publisher": "Regenstrief Institute, Inc. / loinc.org",
+  "dcterms:identifier": "https://loinc.org/",
+  "biobricks:licenseEvidence": [
+    {
+      "source": "R/download.R (this brick)",
+      "quote": "download_url <- \"https://loinc.org/download/loinc-complete/\" ... message(\"You will need to create a free account at https://loinc.org/join/\") ... accept_license_form ... httr::POST(url = accept_license_form$action, body = list(tc_accepted = 1, tc_submit = \"Download\"), ...)",
+      "confidence": "high"
+    },
+    {
+      "source": "stages/01_download.sh + README.md (this brick)",
+      "quote": "LOINC is a common language (set of identifiers, names, and codes) for identifying health measurements, observations, and documents. [downloaded from https://loinc.org/ after login and license acceptance]",
+      "confidence": "high"
+    },
+    {
+      "source": "https://loinc.org/license/ (Regenstrief LOINC License, from prior knowledge; page returns HTTP 403 to automated fetch)",
+      "quote": "LOINC content is copyright (c) Regenstrief Institute, Inc.; it is made available at no cost under the LOINC License, which requires acceptance of a click-through agreement and preservation of the LOINC copyright/attribution notice, and permits use (including in commercial products) subject to those terms.",
+      "confidence": "medium"
+    }
+  ],
+  "biobricks:reviewed": false,
+  "biobricks:reviewNotes": "Determined by BioBricks licensing-provenance annotation agent (Claude). The download stage (R/download.R) proves LOINC is controlled-access: it requires a free loinc.org account (https://loinc.org/join/) and programmatically POSTs 'tc_accepted=1' to accept the LOINC download license agreement before the zip is served. LOINC content is copyrighted by the Regenstrief Institute and distributed under the proprietary LOINC License (not a CC/open license), which requires a click-through and preservation of the copyright notice. I could not fetch loinc.org/license (HTTP 403 to automated fetch) and WebSearch budget was exhausted, so the specific commercial-use terms are cited at medium confidence from training knowledge. Classed restricted (separate license + controlled access); commercial use conditional (the LOINC License does permit use in commercial products but only under click-through acceptance and attribution/copyright-notice obligations). HUMAN MUST CHECK the current LOINC License text at https://loinc.org/license/ to confirm commercial redistribution terms and any prohibition on distributing LOINC as a standalone dataset.",
+  "prov:wasDerivedFrom": [
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://loinc.org/download/loinc-complete/",
+      "dcterms:title": "LOINC Complete (Regenstrief Institute)",
+      "dcterms:license": {
+        "@id": "https://loinc.org/license/",
+        "dcterms:title": "LOINC License (Regenstrief Institute)"
+      },
+      "dcat:landingPage": "https://loinc.org/downloads/",
+      "dcterms:publisher": "Regenstrief Institute, Inc."
+    }
+  ]
+}
